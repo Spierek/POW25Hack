@@ -25,6 +25,8 @@ public class PaintingManager : MonoBehaviour
     public List<Painting> Paintings { get { return m_Paintings; } }
     #endregion
 
+    public SwipeControl SwipeControl;
+
     #region Monobehaviour
     private void Awake()
     {
@@ -40,17 +42,20 @@ public class PaintingManager : MonoBehaviour
     {
         if (m_FinishedLoading)
         {
-            if (Input.GetKeyDown(KeyCode.Return) || (Input.touchCount > 0 && Input.GetTouch(0).tapCount > 0))
-            {
-                GetNewPainting();
-            }
+            var newIndex = (SwipeControl.currentValue % m_Paintings.Count);
+            if (Input.GetKeyDown(KeyCode.Return)) newIndex = m_CurrentIndex+1;
+
+            if(m_CurrentIndex != newIndex)
+                GetNewPainting(newIndex);
         }
     }
     #endregion
 
     #region Methods
-    private void GetNewPainting()
+    private void GetNewPainting(int index)
     {
+        m_CurrentIndex = index;
+
         m_CurrentIndex++;
         if (m_CurrentIndex > m_Paintings.Count - 1)
         {

@@ -6,12 +6,12 @@ PlayerSettings:
   serializedVersion: 8
   productGUID: 04025a6aefc861b478e43ce87a487cd0
   AndroidProfiler: 0
-  defaultScreenOrientation: 0
+  defaultScreenOrientation: 2
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: POW25Hack
-  productName: POW25H-Unity
+  productName: POW25H-PrimeArt
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenStyle: 0
@@ -97,7 +97,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.TomLukeBarbara.ARART
-  bundleVersion: 1.0
+  bundleVersion: 0.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   xboxOneDisableKinectGpuReservation: 0

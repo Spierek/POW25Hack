@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using MaterialUI;
+using UnityEngine;
 using Vuforia;
 
 public class UIManager : MonoBehaviour, ITrackableEventHandler
@@ -11,7 +12,13 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
     private CanvasGroup m_SearchingText;
     [SerializeField]
     private CanvasGroup m_PaintingInfo;
+
+    private float m_FirstTimeTrackingFound =0;
+    private bool m_SlideToastShowed;
+
+    private const float SlideToastDelay = 3f;
     #endregion
+
 
     #region Monobehaviour
     private void Awake()
@@ -26,6 +33,11 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
 
     private void Update()
     {
+        if(!m_SlideToastShowed && m_FirstTimeTrackingFound!=0 && m_FirstTimeTrackingFound + SlideToastDelay < Time.time)
+        {
+            ToastManager.Show("Swipe to see different artworks!");
+            m_SlideToastShowed = true;
+        }
     }
     #endregion
 
@@ -46,6 +58,9 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
     {
         m_SearchingText.alpha = 0;
         m_PaintingInfo.alpha = 1;
+
+        if (!m_SlideToastShowed)
+            m_FirstTimeTrackingFound = Time.time;
     }
 
     private void OnTrackingLost()
