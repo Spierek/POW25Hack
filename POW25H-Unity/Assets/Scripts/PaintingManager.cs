@@ -19,6 +19,7 @@ public class PaintingManager : MonoBehaviour
 
     #region Variables
     private int m_CurrentIndex = -1;
+    private bool m_FinishedLoading = false;
 
     private List<Painting> m_Paintings = new List<Painting>();
     public List<Painting> Paintings { get { return m_Paintings; } }
@@ -32,14 +33,17 @@ public class PaintingManager : MonoBehaviour
 
     private void Start()
     {
-        LoadPaintingDatabase();
+        StartCoroutine(LoadPaintingDatabase());
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) || (Input.touchCount > 0 && Input.GetTouch(0).tapCount > 0))
+        if (m_FinishedLoading)
         {
-            GetNewPainting();
+            if (Input.GetKeyDown(KeyCode.Return) || (Input.touchCount > 0 && Input.GetTouch(0).tapCount > 0))
+            {
+                GetNewPainting();
+            }
         }
     }
     #endregion
@@ -59,24 +63,46 @@ public class PaintingManager : MonoBehaviour
         }
     }
 
-    private void LoadPaintingDatabase()
+    private IEnumerator LoadPaintingDatabase()
     {
-        string path = Path.Combine(Application.streamingAssetsPath, "Paintings");
-        string[] paths = Directory.GetDirectories(path);
+        string path = GetAssetPath();
+
+        // get directories
+        string dirPath = Path.Combine(path, "paintinglist.txt");
+        WWW loader = new WWW(dirPath);
+
+        yield return loader;
+
+        string[] paths = loader.text.Split(';');
 
         for (int i = 0; i < paths.Length; ++i)
         {
-            StartCoroutine(LoadPainting(paths[i]));
+            string paintingPath = Path.Combine(path, paths[i]);
+            StartCoroutine(LoadPainting(paintingPath));
         }
+
+        m_FinishedLoading = true;
+    }
+
+    private string GetAssetPath()
+    {
+        string path = string.Empty;
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
+        path = "file://" + Application.streamingAssetsPath;
+#elif UNITY_ANDROID
+        path = "jar:file://" + Application.dataPath + "!/assets/";
+#endif
+        path = Path.Combine(path, "Paintings");
+
+        return path;
     }
 
     private IEnumerator LoadPainting(string path)
     {
         Painting p = new Painting();
-        string directPath = "file://" + path;
 
-        yield return StartCoroutine(LoadPaintingTexture(directPath, p));
-        yield return StartCoroutine(LoadPaintingData(directPath, p));
+        yield return StartCoroutine(LoadPaintingTexture(path, p));
+        yield return StartCoroutine(LoadPaintingData(path, p));
 
         m_Paintings.Add(p);
 
@@ -105,5 +131,5 @@ public class PaintingManager : MonoBehaviour
 
         painting.Data = JsonUtility.FromJson<PaintingData>(loader.text);
     }
-    #endregion
+#endregion
 }
