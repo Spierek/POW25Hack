@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 using Vuforia;
-using System;
 
 public class UIManager : MonoBehaviour, ITrackableEventHandler
 {
