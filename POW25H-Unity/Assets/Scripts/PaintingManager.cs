@@ -15,6 +15,7 @@ public class PaintingManager : MonoBehaviour
     public delegate void PaintingChangeEvent(Painting p);
     public event PaintingChangeEvent OnPaintingLoaded;      // #LS first load
     public event PaintingChangeEvent OnPaintingChanged;     // #LS change request
+    public event Action OnFinishedLoading;     // #LS db prepared
     #endregion
 
     #region Variables
@@ -46,13 +47,18 @@ public class PaintingManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return)) newIndex = m_CurrentIndex+1;
 
             if(m_CurrentIndex != newIndex)
-                GetNewPainting(newIndex);
+                SelectPainting(newIndex);
         }
     }
     #endregion
 
     #region Methods
-    private void GetNewPainting(int index)
+    public void SelectPainting(Painting p)
+    {
+        SelectPainting(m_Paintings.IndexOf(p));
+    }
+
+    public void SelectPainting(int index)
     {
         m_CurrentIndex = index;
 
@@ -86,7 +92,12 @@ public class PaintingManager : MonoBehaviour
             StartCoroutine(LoadPainting(paintingPath));
         }
 
+        //Not really - should check if all images are loaded in a coroutine instead
         m_FinishedLoading = true;
+        if (OnFinishedLoading != null)
+        {
+            OnFinishedLoading.Invoke();
+        }
     }
 
     private string GetAssetPath()
