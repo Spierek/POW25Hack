@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11436236}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400008}
+  - 114: {fileID: 114000012630274706}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: Untagged
@@ -226,10 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDataSetsToLoad:
   - POW25H
-  - Vuforia
   mDataSetsToActivate:
   - POW25H
-  - Vuforia
   mExternalDatasetRoots: []
 --- !u!1002 &11400003
 EditorExtensionImpl:
@@ -249,8 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VuforiaLicenseKey: AR5M8Ff/////AAAAGXRUTD/DVUoelCHGtQRSC9Yv65mXyvyIuA4Q6D+/Eci4FS8tM0s/ZDHlAwIoZlbddWIof2UJJq7KPlif/+SnHTVGqmLWsxeJQ5zUkwX6xvA+wUcgnVIpXI5pxUyKPSAFt1nSjEnkWcg+KK5rIyreSG6QHBpdjLsyavDdwb+3s6NclIxuL6TT8Q2+8Jsp0kHKeyyqqe1CxswfAaNi4l4oCJlxkb85lvEyRhQjG6QEFrDBOmjIM87q4FRlUPQBM+UIOmU42Oc53SLDQJuUMz3ieFbrCjLhwR6yKSPDde+C+LayMVctLPuOD4yeFu97+8/sloqlGNFeizK8/x7KnBMnwXx1RQiVkjg0TlwITOMMPlL/
-  CameraDeviceModeSetting: -1
-  MaxSimultaneousImageTargets: 10
+  CameraDeviceModeSetting: -2
+  MaxSimultaneousImageTargets: 1
   MaxSimultaneousObjectTargets: 1
   UseDelayedLoadingObjectTargets: 0
   CameraDirection: 0
@@ -490,6 +489,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 1
+--- !u!114 &114000012630274706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81ccbcfe085b8f44ae98cc4c37e3a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionRatio: 0.3
+  rotationRatio: 0.3
 --- !u!212 &212000013965598868
 SpriteRenderer:
   m_ObjectHideFlags: 1

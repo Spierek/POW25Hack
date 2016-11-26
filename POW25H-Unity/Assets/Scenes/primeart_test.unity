@@ -320,7 +320,7 @@ Prefab:
     - target: {fileID: 224000010006828540, guid: e45eaaa09697d0a4b85b710568a8d790,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -39.9
+      value: -39.199997
       objectReference: {fileID: 0}
     - target: {fileID: 224000010006828540, guid: e45eaaa09697d0a4b85b710568a8d790,
         type: 2}
@@ -330,7 +330,7 @@ Prefab:
     - target: {fileID: 224000010006828540, guid: e45eaaa09697d0a4b85b710568a8d790,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 79.8
+      value: 78.399994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e45eaaa09697d0a4b85b710568a8d790, type: 2}
@@ -510,23 +510,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &1477783708 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
-  m_PrefabInternal: {fileID: 1584930471}
---- !u!114 &1477783709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1477783708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c81ccbcfe085b8f44ae98cc4c37e3a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positionRatio: 0.1
-  rotationRatio: 0.1
 --- !u!1001 &1584930471
 Prefab:
   m_ObjectHideFlags: 0
@@ -534,14 +517,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
-      propertyPath: mDataSetsToLoad.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
-      propertyPath: mDataSetsToActivate.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -573,18 +548,6 @@ Prefab:
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
-      propertyPath: MaxSimultaneousImageTargets
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
-      propertyPath: mDataSetsToLoad.Array.data[1]
-      value: Vuforia
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
-      propertyPath: mDataSetsToActivate.Array.data[1]
-      value: Vuforia
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
