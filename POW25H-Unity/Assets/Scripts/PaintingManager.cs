@@ -2,9 +2,20 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Collections;
+using System;
 
 public class PaintingManager : MonoBehaviour
 {
+    #region Singleton
+    private static PaintingManager m_Instance;
+    public static PaintingManager Instance { get { return m_Instance; } }
+    #endregion
+
+    #region Events
+    public delegate void PaintingLoadEvent(Painting p);
+    public event PaintingLoadEvent OnPaintingLoaded;
+    #endregion
+
     #region Variables
     private List<Painting> m_Paintings = new List<Painting>();
     public List<Painting> Paintings { get { return m_Paintings; } }
@@ -13,6 +24,7 @@ public class PaintingManager : MonoBehaviour
     #region Monobehaviour
     private void Awake()
     {
+        m_Instance = this;
         LoadPaintingDatabase();
     }
     #endregion
@@ -25,19 +37,24 @@ public class PaintingManager : MonoBehaviour
 
         for (int i = 0; i < paths.Length; ++i)
         {
-            LoadPainting(paths[i]);
+            StartCoroutine(LoadPainting(paths[i]));
         }
     }
 
-    private void LoadPainting(string path)
+    private IEnumerator LoadPainting(string path)
     {
         Painting p = new Painting();
         string directPath = "file://" + path;
 
-        StartCoroutine(LoadPaintingTexture(directPath, p));
-        StartCoroutine(LoadPaintingData(directPath, p));
+        yield return StartCoroutine(LoadPaintingTexture(directPath, p));
+        yield return StartCoroutine(LoadPaintingData(directPath, p));
 
         m_Paintings.Add(p);
+
+        if (OnPaintingLoaded != null)
+        {
+            OnPaintingLoaded.Invoke(p);
+        }
     }
 
     private IEnumerator LoadPaintingTexture(string path, Painting painting)
