@@ -18,6 +18,13 @@ public class UIPaintingInfo : MonoBehaviour
     private void Start()
     {
         PaintingManager.Instance.OnPaintingLoaded += SetPaintingInfo;
+        PaintingManager.Instance.OnPaintingChanged += SetPaintingInfo;
+    }
+
+    private void OnDestroy()
+    {
+        PaintingManager.Instance.OnPaintingLoaded -= SetPaintingInfo;
+        PaintingManager.Instance.OnPaintingChanged -= SetPaintingInfo;
     }
     #endregion
 

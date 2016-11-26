@@ -24,6 +24,13 @@ public class PaintingDisplay : MonoBehaviour
     private void Start()
     {
         PaintingManager.Instance.OnPaintingLoaded += SetNewPainting;
+        PaintingManager.Instance.OnPaintingChanged += SetNewPainting;
+    }
+
+    private void OnDestroy()
+    {
+        PaintingManager.Instance.OnPaintingLoaded -= SetNewPainting;
+        PaintingManager.Instance.OnPaintingChanged -= SetNewPainting;
     }
     #endregion
 

@@ -12,11 +12,14 @@ public class PaintingManager : MonoBehaviour
     #endregion
 
     #region Events
-    public delegate void PaintingLoadEvent(Painting p);
-    public event PaintingLoadEvent OnPaintingLoaded;
+    public delegate void PaintingChangeEvent(Painting p);
+    public event PaintingChangeEvent OnPaintingLoaded;      // #LS first load
+    public event PaintingChangeEvent OnPaintingChanged;     // #LS change request
     #endregion
 
     #region Variables
+    private int m_CurrentIndex = -1;
+
     private List<Painting> m_Paintings = new List<Painting>();
     public List<Painting> Paintings { get { return m_Paintings; } }
     #endregion
@@ -31,9 +34,31 @@ public class PaintingManager : MonoBehaviour
     {
         LoadPaintingDatabase();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) || (Input.touchCount > 0 && Input.GetTouch(0).tapCount > 0))
+        {
+            GetNewPainting();
+        }
+    }
     #endregion
 
     #region Methods
+    private void GetNewPainting()
+    {
+        m_CurrentIndex++;
+        if (m_CurrentIndex > m_Paintings.Count - 1)
+        {
+            m_CurrentIndex = 0;
+        }
+
+        if (OnPaintingChanged != null)
+        {
+            OnPaintingChanged.Invoke(m_Paintings[m_CurrentIndex]);
+        }
+    }
+
     private void LoadPaintingDatabase()
     {
         string path = Path.Combine(Application.streamingAssetsPath, "Paintings");
