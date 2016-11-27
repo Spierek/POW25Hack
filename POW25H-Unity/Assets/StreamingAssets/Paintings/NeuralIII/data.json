@@ -1,10 +1,10 @@
 {
-	"name": "Neural II",
+	"name": "Neural III",
 	"artist": "Komputer Bartka Górnickiego",
   	"technique": "Neural Style, Print",
   	"date": 2016,
-	"sizeX": 68,
-	"sizeY": 102,
+	"sizeX": 102,
+	"sizeY": 68,
 	"price": 70,
 	"subscription": true
 }
