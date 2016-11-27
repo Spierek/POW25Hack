@@ -104,12 +104,14 @@ public class PaintingManager : MonoBehaviour
     private string GetAssetPath()
     {
         string path = string.Empty;
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
-        path = "file://" + Application.streamingAssetsPath;
-#elif UNITY_ANDROID
-        path = "jar:file://" + Application.dataPath + "!/assets/";
-#endif
-        path = Path.Combine(path, "Paintings");
+        //#if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
+        //        path = "file://" + Application.streamingAssetsPath;
+        //#elif UNITY_ANDROID
+        //        path = "jar:file://" + Application.dataPath + "!/assets/";
+        //#endif
+        //path = Path.Combine(path, "Paintings");
+
+        path = "http://bluebrick.pl/static_files/PrimeArtEye/";
 
         return path;
     }
@@ -117,6 +119,7 @@ public class PaintingManager : MonoBehaviour
     private IEnumerator LoadPainting(string path)
     {
         Painting p = new Painting();
+        Debug.Log("Loading painting from " + path);
 
         yield return StartCoroutine(LoadPaintingTexture(path, p));
         yield return StartCoroutine(LoadPaintingData(path, p));
@@ -126,13 +129,15 @@ public class PaintingManager : MonoBehaviour
         if (OnPaintingLoaded != null)
         {
             OnPaintingLoaded.Invoke(p);
-            Debug.Log("Painting loaded.");
+            Debug.Log("Painting loaded from " + path);
         }
     }
 
     private IEnumerator LoadPaintingTexture(string path, Painting painting)
     {
-        string imgPath = Path.Combine(path, "img.jpg");
+        string imgPath = path + "/img.jpg";
+        Debug.Log("Loading image from " + imgPath);
+
         WWW loader = new WWW(imgPath);
 
         yield return loader;
@@ -142,7 +147,7 @@ public class PaintingManager : MonoBehaviour
 
     private IEnumerator LoadPaintingData(string path, Painting painting)
     {
-        string dataPath = Path.Combine(path, "data.json");
+        string dataPath = path + "/data.json";
         WWW loader = new WWW(dataPath);
 
         yield return loader;
