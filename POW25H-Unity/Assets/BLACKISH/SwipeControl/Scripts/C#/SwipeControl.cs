@@ -188,10 +188,10 @@ public class SwipeControl : MonoBehaviour {
 					tPos = matrix.inverse.MultiplyPoint3x4(pos);		
 			
 					//BEGAN
-					print(tPos + " inside " + mouseRect + "?");
+					//print(tPos + " inside " + mouseRect + "?");
 					if (touch.phase == TouchPhase.Began && mouseRect.Contains(tPos)) {
 						fingerStartArea[touch.fingerId] = 1;
-						print("hit!");
+						//print("hit!");
 					}
 					//WHILE FINGER DOWN
 					if(fingerStartArea[touch.fingerId] == 1) { // no touchRect.Contains check because once you touched down you're allowed to drag outside...

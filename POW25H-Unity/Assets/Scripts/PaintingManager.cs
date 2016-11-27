@@ -21,6 +21,7 @@ public class PaintingManager : MonoBehaviour
     #region Variables
     private int m_CurrentIndex = -1;
     private bool m_FinishedLoading = false;
+    private int m_PrevSlideValue = 0;
 
     private List<Painting> m_Paintings = new List<Painting>();
     public List<Painting> Paintings { get { return m_Paintings; } }
@@ -41,13 +42,17 @@ public class PaintingManager : MonoBehaviour
 
     private void Update()
     {
-        if (m_FinishedLoading)
+        if (m_FinishedLoading && m_Paintings.Count!=0)
         {
-            var newIndex = (SwipeControl.currentValue % m_Paintings.Count);
-            if (Input.GetKeyDown(KeyCode.Return)) newIndex = m_CurrentIndex+1;
+            var newSlideValue = SwipeControl.currentValue;
+            if (Input.GetKeyDown(KeyCode.Return)) newSlideValue = m_PrevSlideValue + 1;
 
-            if(m_CurrentIndex != newIndex)
-                SelectPainting(newIndex);
+            if (m_PrevSlideValue != newSlideValue)
+            {
+                Debug.Log("Switching due to swipe, value " + SwipeControl.currentValue + " - " + SwipeControl.smoothValue);
+                SelectPainting(newSlideValue > m_PrevSlideValue ? m_CurrentIndex + 1 : m_CurrentIndex - 1);
+                m_PrevSlideValue = newSlideValue;
+            }
         }
     }
     #endregion
@@ -60,13 +65,9 @@ public class PaintingManager : MonoBehaviour
 
     public void SelectPainting(int index)
     {
+        Debug.Log("Selecting painting " + index);
         m_CurrentIndex = index;
-
-        m_CurrentIndex++;
-        if (m_CurrentIndex > m_Paintings.Count - 1)
-        {
-            m_CurrentIndex = 0;
-        }
+        m_CurrentIndex = (m_CurrentIndex % m_Paintings.Count);
 
         if (OnPaintingChanged != null)
         {
@@ -125,6 +126,7 @@ public class PaintingManager : MonoBehaviour
         if (OnPaintingLoaded != null)
         {
             OnPaintingLoaded.Invoke(p);
+            Debug.Log("Painting loaded.");
         }
     }
 
