@@ -245,7 +245,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE90A
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \ue5c8
   m_Size: 24
-  m_ScaledSize: 18.960001
+  m_ScaledSize: 25.279999
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -791,7 +791,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE90A
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -1671,7 +1671,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \ue88f
   m_Size: 24
-  m_ScaledSize: 18.960001
+  m_ScaledSize: 25.279999
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -1846,7 +1846,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE90A
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -2087,7 +2087,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2741,7 +2741,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3980,6 +3980,39 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807727178}
+--- !u!1 &810527899 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010304984074, guid: f85b6e7c052b37742897d6a2c31f406b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1406702179}
+--- !u!114 &810527900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810527899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cadfb90286c81fd42a6785e4e7cd3024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mTrackableName: primeart_2
+  mPreserveChildSize: 0
+  mInitializedInEditor: 1
+  mDataSetPath: QCAR/POW25H.xml
+  mExtendedTracking: 1
+  mInitializeSmartTerrain: 0
+  mReconstructionToInitialize: {fileID: 0}
+  mSmartTerrainOccluderBoundsMin: {x: 0, y: 0, z: 0}
+  mSmartTerrainOccluderBoundsMax: {x: 0, y: 0, z: 0}
+  mIsSmartTerrainOccluderOffset: 0
+  mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
+  mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
+  mAutoSetOccluderFromTargetSize: 0
+  mAspectRatio: 1
+  mImageTargetType: 0
+  mWidth: 1
+  mHeight: 1
 --- !u!1 &812867082
 GameObject:
   m_ObjectHideFlags: 0
@@ -4822,7 +4855,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4994,7 +5027,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE902
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -5534,6 +5567,32 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1197914801}
+--- !u!21 &1207842722
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: primeart_2_scaledMaterial
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 10adf69cb37f4c008835ba6a5194e8dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1212311701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5605,7 +5664,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE902
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -5657,7 +5716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29527203192d7a442b0d5e8ec60111d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Trackable: {fileID: 1406702180}
+  m_Trackable: {fileID: 810527900}
   m_SearchingText: {fileID: 812867084}
   m_PaintingInfo: {fileID: 129559151}
 --- !u!4 &1212323112
@@ -5835,7 +5894,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \ue87d
   m_Size: 24
-  m_ScaledSize: 18.960001
+  m_ScaledSize: 25.279999
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -5946,7 +6005,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5992,7 +6051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MatchOrientationToScreen: 1
-  m_ScaleFactor: 0.79
+  m_ScaleFactor: 1.0533333
   m_LastResolution: {x: 640, y: 480}
 --- !u!114 &1298649478
 MonoBehaviour:
@@ -6024,7 +6083,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 600, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -6548,16 +6607,48 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1448380404}
-    m_RemovedComponents: []
+      objectReference: {fileID: 1752867745}
+    - target: {fileID: 23000010945855946, guid: f85b6e7c052b37742897d6a2c31f406b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1207842722}
+    - target: {fileID: 114000012245466210, guid: f85b6e7c052b37742897d6a2c31f406b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012736274444, guid: f85b6e7c052b37742897d6a2c31f406b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012736274444, guid: f85b6e7c052b37742897d6a2c31f406b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012736274444, guid: f85b6e7c052b37742897d6a2c31f406b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012245466210, guid: f85b6e7c052b37742897d6a2c31f406b,
+        type: 2}
+      propertyPath: mTrackableName
+      value: FrameMarker1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012245466210, guid: f85b6e7c052b37742897d6a2c31f406b,
+        type: 2}
+      propertyPath: mMarkerID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012245466210, guid: f85b6e7c052b37742897d6a2c31f406b,
+        type: 2}
+      propertyPath: mPreserveChildSize
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000012245466210, guid: f85b6e7c052b37742897d6a2c31f406b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f85b6e7c052b37742897d6a2c31f406b, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1406702180 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000012245466210, guid: f85b6e7c052b37742897d6a2c31f406b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1406702179}
-  m_Script: {fileID: 11500000, guid: 08e4618365b5df6439e08cd7109174d4, type: 3}
 --- !u!1 &1407697767
 GameObject:
   m_ObjectHideFlags: 0
@@ -6645,7 +6736,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6843,7 +6934,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE902
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -6868,134 +6959,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1438669437}
---- !u!43 &1448380404
-Mesh:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  serializedVersion: 8
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    firstVertex: 0
-    vertexCount: 4
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.5}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexBuffer: 000001000200020001000300
-  m_Skin: []
-  m_VertexData:
-    m_CurrentChannels: 11
-    m_VertexCount: 4
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 128
-    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f00000000000000000000803f0000003f00000000000000bf000000000000803f000000000000803f000000000000003f000000000000003f000000000000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0, z: 0.5}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshOptimized: 0
 --- !u!1 &1455599538
 GameObject:
   m_ObjectHideFlags: 0
@@ -7384,7 +7347,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7517,6 +7480,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToLoad.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToActivate.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -7549,14 +7520,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400006, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
-      propertyPath: CameraDeviceModeSetting
-      value: -3
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToActivate.Array.data[0]
+      value: POW25H
       objectReference: {fileID: 0}
-    - target: {fileID: 212000013965598868, guid: bf30d577eead1ef40bcf2b404289daf4,
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToLoad.Array.data[0]
+      value: POW25H
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012630274706, guid: bf30d577eead1ef40bcf2b404289daf4,
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012630274706, guid: bf30d577eead1ef40bcf2b404289daf4,
+        type: 2}
+      propertyPath: positionRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012630274706, guid: bf30d577eead1ef40bcf2b404289daf4,
+        type: 2}
+      propertyPath: rotationRatio
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
@@ -7630,7 +7615,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \ue5c3
   m_Size: 24
-  m_ScaledSize: 18.960001
+  m_ScaledSize: 25.279999
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -7715,7 +7700,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE902
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -8382,6 +8367,134 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1720870125}
+--- !u!43 &1752867745
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0, z: 0.5}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000001000200020001000300
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 11
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 128
+    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f00000000000000000000803f0000003f00000000000000bf000000000000803f000000000000803f000000000000003f000000000000003f000000000000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0, z: 0.5}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshOptimized: 0
 --- !u!1 &1761227136
 GameObject:
   m_ObjectHideFlags: 0
@@ -8871,7 +8984,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE90A
   m_Size: 56
-  m_ScaledSize: 44.24
+  m_ScaledSize: 58.986664
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -9144,7 +9257,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \ue5c8
   m_Size: 24
-  m_ScaledSize: 18.960001
+  m_ScaledSize: 25.279999
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
@@ -9326,7 +9439,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9677,7 +9790,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bdb3c2fa2edce14428c2588d923d9431, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e0ae8fe4abe4e44bb4a9a89648eea4, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10138,7 +10251,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: \uE906
   m_Size: 24
-  m_ScaledSize: 25.28
+  m_ScaledSize: 33.706665
   m_SizeMode: 3
   m_MaterialUiScaler: {fileID: 1298649477}
   m_VectorImageData:
