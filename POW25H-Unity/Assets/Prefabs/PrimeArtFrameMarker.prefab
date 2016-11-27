@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012736274444}
   - 114: {fileID: 114000010847510636}
-  - 114: {fileID: 114000012245466210}
   - 33: {fileID: 33000010657964686}
   - 23: {fileID: 23000010945855946}
   - 114: {fileID: 114000012867076740}
+  - 114: {fileID: 114000012723238746}
   m_Layer: 0
   m_Name: PrimeArtFrameMarker
   m_TagString: Untagged
@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 1000010304984074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011296281068}
@@ -151,7 +151,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7159c5f5559087c48a2fa99fbdbfd78b, type: 2}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e246bd21db86f8346bc66895a661fcc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000012245466210
+--- !u!114 &114000012723238746
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -260,13 +260,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010304984074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e4618365b5df6439e08cd7109174d4, type: 3}
+  m_Script: {fileID: 11500000, guid: cadfb90286c81fd42a6785e4e7cd3024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: FrameMarker0
+  mTrackableName: primeart_2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mMarkerID: 0
+  mDataSetPath: QCAR/POW25H.xml
+  mExtendedTracking: 1
+  mInitializeSmartTerrain: 0
+  mReconstructionToInitialize: {fileID: 0}
+  mSmartTerrainOccluderBoundsMin: {x: 0, y: 0, z: 0}
+  mSmartTerrainOccluderBoundsMax: {x: 0, y: 0, z: 0}
+  mIsSmartTerrainOccluderOffset: 0
+  mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
+  mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
+  mAutoSetOccluderFromTargetSize: 0
+  mAspectRatio: 1
+  mImageTargetType: 0
+  mWidth: 0.2
+  mHeight: 0.2
 --- !u!114 &114000012867076740
 MonoBehaviour:
   m_ObjectHideFlags: 1

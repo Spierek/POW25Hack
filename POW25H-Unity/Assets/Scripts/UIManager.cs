@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
     private float m_FirstTimeTrackingFound =0;
     private bool m_SlideToastShowed;
 
-    private const float SlideToastDelay = 3f;
+    private const float SlideToastDelay = 1f;
     #endregion
 
 
@@ -65,8 +65,8 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
 
     private void OnTrackingLost()
     {
-        //m_SearchingText.SetActive(true);
-        //m_PaintingInfo.SetActive(false);
+        m_SearchingText.SetActive(true);
+        m_PaintingInfo.SetActive(false);
     }
     #endregion
 }

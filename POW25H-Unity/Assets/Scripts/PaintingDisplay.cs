@@ -40,7 +40,7 @@ public class PaintingDisplay : MonoBehaviour
         PaintingManager.Instance.OnPaintingLoaded -= SetNewPainting;
 
         m_Material.mainTexture = p.Texture;
-        transform.localScale = new Vector3(p.Data.sizeX / 50f, transform.localScale.y, p.Data.sizeY / 50f);
+        transform.localScale = new Vector3(p.Data.sizeX / 20f, transform.localScale.y, p.Data.sizeY / 20f);
     }
     #endregion
 }
