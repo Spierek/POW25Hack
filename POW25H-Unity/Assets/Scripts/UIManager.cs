@@ -9,9 +9,9 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
     private TrackableBehaviour m_Trackable;
 
     [SerializeField]
-    private CanvasGroup m_SearchingText;
+    private GameObject m_SearchingText;
     [SerializeField]
-    private CanvasGroup m_PaintingInfo;
+    private GameObject m_PaintingInfo;
 
     private float m_FirstTimeTrackingFound =0;
     private bool m_SlideToastShowed;
@@ -56,8 +56,8 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
 
     private void OnTrackingFound()
     {
-        m_SearchingText.alpha = 0;
-        m_PaintingInfo.alpha = 1;
+        m_SearchingText.SetActive(false);
+        m_PaintingInfo.SetActive(true);
 
         if (!m_SlideToastShowed)
             m_FirstTimeTrackingFound = Time.time;
@@ -65,8 +65,8 @@ public class UIManager : MonoBehaviour, ITrackableEventHandler
 
     private void OnTrackingLost()
     {
-        m_SearchingText.alpha = 1;
-        m_PaintingInfo.alpha = 0;
+        //m_SearchingText.SetActive(true);
+        //m_PaintingInfo.SetActive(false);
     }
     #endregion
 }

@@ -19,12 +19,13 @@ public class PaintingManager : MonoBehaviour
     #endregion
 
     #region Variables
-    private int m_CurrentIndex = -1;
+    private int m_CurrentIndex = 0;
     private bool m_FinishedLoading = false;
     private int m_PrevSlideValue = 0;
 
     private List<Painting> m_Paintings = new List<Painting>();
     public List<Painting> Paintings { get { return m_Paintings; } }
+    public Painting CurrentPainting { get { return m_Paintings[m_CurrentIndex]; } }
     #endregion
 
     public SwipeControl SwipeControl;
